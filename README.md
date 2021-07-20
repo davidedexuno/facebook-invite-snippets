@@ -1,6 +1,7 @@
-# facebook-invite-snippets - Facebook Invite All Code
+# facebook-invite-snippets
 
-## Snippets to invite users to a Page (Updated 2021)
+## Facebook Invite All Code (Updated 2021)
 
-Inviting All Friends to Facebook Page at Once JavaScript Snippet (Updated 2021)
+Snippets to invite users to a Page. Inviting All Friends to Facebook Page at Once JavaScript Snippet
 
+Updated 2021.
