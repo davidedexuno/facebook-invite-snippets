@@ -6,10 +6,14 @@ function scrollAndDo(p) {
 	window.job = setInterval(() => {
 		p.scrollBox.scrollTo(0, p.scrollBox.scrollHeight)
 		p.onScroll()
-		if(p.scrollBox.offsetHeight + p.scrollBox.scrollTop == p.scrollBox.scrollHeight) {
-			stopScrolling();
-			setTimeout(() => alert('Scrolling complete.'), 1 * 1000);
+		if(p.scrollBox.offsetHeight + p.scrollBox.scrollTop < p.scrollBox.scrollHeight) {
+			return
 		}
+		if(p.scrollBox.querySelector('div:last-child [data-visualcompletion="loading-state"]')) {
+			return
+		}
+		stopScrolling()
+		setTimeout(() => alert('Scrolling complete.'), 1 * 1000)
 	}, 100)
 }
 function stopScrolling() {
