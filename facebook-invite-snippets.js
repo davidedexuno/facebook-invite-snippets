@@ -6,7 +6,7 @@ function autoscroll() {
 	try {
 		var scrollBox = Array.from( document.querySelectorAll('[role="dialog"] [role="progressbar"][data-visualcompletion="loading-state"]') ).pop().parentNode.parentNode.parentNode.parentNode
 	} catch(e) {
-		alert('unidentified box to scroll')
+		console.log('unidentified box to scroll')
 		return
 	}
 	window.job = setInterval(() => {
@@ -19,7 +19,7 @@ function autoscroll() {
 			return
 		}
 		clearInterval( window.job )
-		setTimeout(() => alert('Scrolling complete.'), 1 * 1000)
+		setTimeout(() => console.log('Scrolling complete.'), 1 * 1000)
 	}, 100)
 }
 function stopAutoscroll() {
