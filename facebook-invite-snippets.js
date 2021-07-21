@@ -2,7 +2,7 @@
 // Execute every snippet into Console
 
 // Common functions
-function autoscroll(p) {
+function autoscroll() {
 	try {
 		var scrollBox = Array.from( document.querySelectorAll('[role="dialog"] [role="progressbar"][data-visualcompletion="loading-state"]') ).pop().parentNode.parentNode.parentNode.parentNode
 	} catch(e) {
