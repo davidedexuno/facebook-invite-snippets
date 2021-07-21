@@ -4,7 +4,7 @@
 // Common functions
 function autoscroll(p) {
 	try {
-		var scrollBox = document.querySelector('[role="dialog"] [role="progressbar"][data-visualcompletion="loading-state"]').parentNode.parentNode.parentNode.parentNode
+		var scrollBox = Array.from( document.querySelectorAll('[role="dialog"] [role="progressbar"][data-visualcompletion="loading-state"]') ).pop().parentNode.parentNode.parentNode.parentNode
 	} catch(e) {
 		alert('unidentified box to scroll')
 		return
