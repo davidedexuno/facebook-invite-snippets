@@ -2,7 +2,7 @@
 // Execute every snippet into Console
 
 // Common functions
-function autoscroll() {
+function autoscroll(p) {
 	try {
 		var scrollBox = Array.from( document.querySelectorAll('[role="dialog"] [role="progressbar"][data-visualcompletion="loading-state"]') ).pop().parentNode.parentNode.parentNode.parentNode
 	} catch(e) {
@@ -14,7 +14,7 @@ function autoscroll() {
 			return
 		}
 		scrollBox.scrollTo(0, scrollBox.scrollHeight)
-		if(document.querySelector('[role="dialog"] [role="progressbar"][data-visualcompletion="loading-state"]')) {
+		if(scrollBox.querySelector('[role="progressbar"][data-visualcompletion="loading-state"]')) {
 			// keep scrolling
 			return
 		}
