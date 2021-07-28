@@ -26,13 +26,14 @@ function stopAutoscroll() {
 	clearInterval( window.job )
 }
 
-// Group
+// Autoscroll
 autoscroll()
-Array.from( document.querySelectorAll('[role="dialog"] [aria-checked="false"]:not([aria-disabled="true"])') ).map( e => e.click() ).length
+
+// Group
+Array.from( document.querySelectorAll('[role="dialog"] [aria-checked="false"]:not([aria-disabled="true"])') ).map( e => e.click() ).length // Group
 
 // Post
-autoscroll()
-Array.from( document.querySelectorAll('[role="dialog"] [role="button"]:not([aria-disabled="true"])[aria-label="Invita"]') ).map( e => e.click() ).length
+Array.from( document.querySelectorAll('[role="dialog"] [role="button"]:not([aria-disabled="true"])[aria-label="Invita"]') ).map( e => e.click() ).length // Post
 
 // Stop Scrolling
 stopAutoscroll()
